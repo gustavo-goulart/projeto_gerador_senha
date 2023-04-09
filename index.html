@@ -9,7 +9,28 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>Gerador de Senhas</h1>
-    <img src="" alt="" />
+    <img class="logo" src="images/logo.png" alt="logo gerador de senha" />
+
+    <main class="container-input">
+      <span>Tamanho <span id="valor"></span> caracteres</span>
+
+      <input id="slider" class="slider" type="range" min="5" max="25" />
+
+      <button id="button" class="button-cta" onclick="generatePassword()">
+        Gerar senha
+      </button>
+    </main>
+
+    <div
+      id="container-password"
+      onclick="copyPassword()"
+      class="container-password hide"
+    >
+      <span class="title">Sua senha gerada foi:</span>
+      <span id="password" class="password"></span>
+      <span class="tooltip">Clique na senha para copiar. 👆🏻</span>
+    </div>
+
+    <script src="script.js"></script>
   </body>
 </html>
